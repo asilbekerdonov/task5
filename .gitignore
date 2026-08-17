@@ -25,3 +25,8 @@ _ide_helper.php
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Trailer video clips (large binary files, not committed)
+public/trailers/clips/*.mp4
+public/trailers/clips/*.mov
+public/trailers/clips/*.webm
