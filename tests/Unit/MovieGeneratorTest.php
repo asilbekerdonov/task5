@@ -4,6 +4,8 @@ namespace Tests\Unit;
 
 use App\Domain\Movie\Generators\MovieGenerator;
 use App\Domain\Movie\Services\LocaleRepository;
+use App\Domain\Movie\Generators\TrailerGenerator;
+use App\Domain\Movie\Services\ClipPoolRepository;
 use Tests\TestCase;
 
 class MovieGeneratorTest extends TestCase
@@ -13,7 +15,10 @@ class MovieGeneratorTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->generator = new MovieGenerator(new LocaleRepository());
+        $this->generator = new MovieGenerator(
+            new LocaleRepository(),
+            new TrailerGenerator(new ClipPoolRepository())
+        );
     }
 
     public function test_generate_is_deterministic(): void
@@ -199,5 +204,32 @@ class MovieGeneratorTest extends TestCase
         $movie2 = $this->generator->generate($pageSeed, $movieIndex, $locale, 3.7, 2.5);
         
         $this->assertEquals($movie1['reviews'], $movie2['reviews']);
+    }
+
+
+    public function test_movie_includes_trailer(): void
+    {
+        $pageSeed = 987654321;
+        $movieIndex = 1;
+        $locale = 'ru_RU';
+
+        $movie = $this->generator->generate($pageSeed, $movieIndex, $locale);
+        
+        $this->assertArrayHasKey('trailer', $movie);
+        $this->assertArrayHasKey('duration', $movie['trailer']);
+        $this->assertArrayHasKey('clips', $movie['trailer']);
+        $this->assertArrayHasKey('titleAnimation', $movie['trailer']);
+    }
+
+    public function test_trailer_independent_from_likes_reviews(): void
+    {
+        $pageSeed = 987654321;
+        $movieIndex = 1;
+        $locale = 'ru_RU';
+        
+        $movieLow = $this->generator->generate($pageSeed, $movieIndex, $locale, 1.0, 1.0);
+        $movieHigh = $this->generator->generate($pageSeed, $movieIndex, $locale, 9.0, 9.0);
+        
+        $this->assertEquals($movieLow['trailer'], $movieHigh['trailer']);
     }
 }

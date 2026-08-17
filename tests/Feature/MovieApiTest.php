@@ -32,6 +32,24 @@ class MovieApiTest extends TestCase
                                 'text',
                             ],
                         ],
+                        'trailer' => [
+                            'duration',
+                            'titleAnimation' => ['type'],
+                            'clips' => [
+                                [
+                                    'clipId',
+                                    'source',
+                                    'zoom',
+                                    'speed',
+                                    'colorFilter',
+                                ],
+                            ],
+                            'transitions',
+                            'freezeFrame' => [
+                                'clipId',
+                                'source',
+                            ],
+                        ],
                     ],
                 ],
                 'meta' => [
@@ -104,6 +122,17 @@ class MovieApiTest extends TestCase
         $this->assertNotEquals(
             $response1->json('data.0.likes'),
             $response2->json('data.0.likes')
+        );
+    }
+
+    public function test_changing_likes_does_not_change_trailer(): void
+    {
+        $response1 = $this->getJson('/api/movies?seed=123&page=1&likes=1');
+        $response2 = $this->getJson('/api/movies?seed=123&page=1&likes=9');
+
+        $this->assertEquals(
+            $response1->json('data.0.trailer'),
+            $response2->json('data.0.trailer')
         );
     }
 }

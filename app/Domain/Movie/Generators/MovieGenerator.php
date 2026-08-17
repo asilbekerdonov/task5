@@ -12,11 +12,12 @@ final class MovieGenerator
     private const FAKER_SUPPORTED_LOCALES = ['ru_RU', 'en_US'];
 
     public function __construct(
-        private readonly LocaleRepository $locales
+        private readonly LocaleRepository $locales,
+        private readonly TrailerGenerator $trailerGenerator
     ) {}
 
     /**
-     * @return array{title: string, actors: string[], genre: string, year: int, likes: int, reviews: array}
+     * @return array{title: string, actors: string[], genre: string, year: int, likes: int, reviews: array, trailer: array}
      */
     public function generate(
         int $pageSeed,
@@ -32,6 +33,7 @@ final class MovieGenerator
             'year' => $this->generateYear($pageSeed, $movieIndex),
             'likes' => $this->generateLikes($pageSeed, $movieIndex, $likesAvg),
             'reviews' => $this->generateReviews($pageSeed, $movieIndex, $locale, $reviewsAvg),
+            'trailer' => $this->trailerGenerator->generate($pageSeed, $movieIndex),
         ];
     }
 

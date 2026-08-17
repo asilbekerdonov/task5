@@ -3,6 +3,8 @@
 namespace Tests\Unit;
 
 use App\Domain\Movie\Generators\MovieGenerator;
+use App\Domain\Movie\Generators\TrailerGenerator;
+use App\Domain\Movie\Services\ClipPoolRepository;
 use App\Domain\Movie\Services\LocaleRepository;
 use App\Domain\Movie\Services\MoviePageGenerator;
 use Tests\TestCase;
@@ -14,7 +16,10 @@ class MoviePageGeneratorTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $movieGenerator = new MovieGenerator(new LocaleRepository());
+        $movieGenerator = new MovieGenerator(
+            new LocaleRepository(),
+            new TrailerGenerator(new ClipPoolRepository())
+        );
         $this->pageGenerator = new MoviePageGenerator($movieGenerator);
     }
 

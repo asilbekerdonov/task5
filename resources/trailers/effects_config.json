@@ -1,0 +1,6 @@
+{
+  "title_animations": ["slide-in", "fade-scale", "typewriter", "glitch-reveal", "zoom-blast"],
+  "transitions": ["fade", "cut", "zoom-blur", "wipe-left", "flash"],
+  "color_filters": ["warm", "cold", "high-contrast", "desaturated", "none"],
+  "taglines": ["THIS FALL", "COMING SOON", "IN THEATERS", "ONE NIGHT ONLY", "THE EVENT OF THE YEAR"]
+}
