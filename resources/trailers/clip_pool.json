@@ -1,30 +1,277 @@
 [
-  {"id": "clip_01", "source": "/trailers/clips/clip_01.mp4", "tags": ["unknown"], "duration": 18.85},
-  {"id": "clip_02", "source": "/trailers/clips/clip_02.mp4", "tags": ["unknown"], "duration": 30.82},
-  {"id": "clip_03", "source": "/trailers/clips/clip_03.mp4", "tags": ["unknown"], "duration": 15.14},
-  {"id": "clip_04", "source": "/trailers/clips/clip_04.mp4", "tags": ["unknown"], "duration": 20.60},
-  {"id": "clip_05", "source": "/trailers/clips/clip_05.mp4", "tags": ["unknown"], "duration": 6.51},
-  {"id": "clip_06", "source": "/trailers/clips/clip_06.mp4", "tags": ["unknown"], "duration": 12.50},
-  {"id": "clip_07", "source": "/trailers/clips/clip_07.mp4", "tags": ["unknown"], "duration": 11.01},
-  {"id": "clip_08", "source": "/trailers/clips/clip_08.mp4", "tags": ["unknown"], "duration": 26.11},
-  {"id": "clip_09", "source": "/trailers/clips/clip_09.mp4", "tags": ["unknown"], "duration": 20.15},
-  {"id": "clip_10", "source": "/trailers/clips/clip_10.mp4", "tags": ["water", "nature"], "duration": 12.0},
-  {"id": "clip_11", "source": "/trailers/clips/clip_11.mp4", "tags": ["sky", "calm"], "duration": 10.0},
-  {"id": "clip_12", "source": "/trailers/clips/clip_12.mp4", "tags": ["sky", "water"], "duration": 8.0},
-  {"id": "clip_13", "source": "/trailers/clips/clip_13.mp4", "tags": ["water", "nature", "calm"], "duration": 15.0},
-  {"id": "clip_14", "source": "/trailers/clips/clip_14.mp4", "tags": ["nature", "calm"], "duration": 12.0},
-  {"id": "clip_15", "source": "/trailers/clips/clip_15.mp4", "tags": ["nature", "fast"], "duration": 20.0},
-  {"id": "clip_16", "source": "/trailers/clips/clip_16.mp4", "tags": ["water", "nature"], "duration": 10.0},
-  {"id": "clip_17", "source": "/trailers/clips/clip_17.mp4", "tags": ["water", "nature", "calm"], "duration": 12.0},
-  {"id": "clip_18", "source": "/trailers/clips/clip_18.mp4", "tags": ["abstract", "industrial"], "duration": 8.0},
-  {"id": "clip_19", "source": "/trailers/clips/clip_19.mp4", "tags": ["urban", "crowd", "night"], "duration": 10.0},
-  {"id": "clip_20", "source": "/trailers/clips/clip_20.mp4", "tags": ["water", "sky"], "duration": 8.0},
-  {"id": "clip_21", "source": "/trailers/clips/clip_21.mp4", "tags": ["water", "sky", "urban"], "duration": 10.0},
-  {"id": "clip_22", "source": "/trailers/clips/clip_22.mp4", "tags": ["nature", "calm"], "duration": 12.0},
-  {"id": "clip_23", "source": "/trailers/clips/clip_23.mp4", "tags": ["urban", "industrial", "fast"], "duration": 6.0},
-  {"id": "clip_24", "source": "/trailers/clips/clip_24.mp4", "tags": ["nature", "calm"], "duration": 8.0},
-  {"id": "clip_25", "source": "/trailers/clips/clip_25.mp4", "tags": ["water", "nature"], "duration": 10.0},
-  {"id": "clip_26", "source": "/trailers/clips/clip_26.mp4", "tags": ["water", "calm"], "duration": 8.0},
-  {"id": "clip_27", "source": "/trailers/clips/clip_27.mp4", "tags": ["water", "calm"], "duration": 10.0},
-  {"id": "clip_28", "source": "/trailers/clips/clip_28.mp4", "tags": ["abstract"], "duration": 8.0}
+    {
+        "id": "clip_01",
+        "source": "/trailers/clips/clip_01.mp4",
+        "tags": [
+            "unknown"
+        ],
+        "duration": 18.85,
+        "frame": "/trailers/frames/clip_01.jpg"
+    },
+    {
+        "id": "clip_02",
+        "source": "/trailers/clips/clip_02.mp4",
+        "tags": [
+            "unknown"
+        ],
+        "duration": 30.82,
+        "frame": "/trailers/frames/clip_02.jpg"
+    },
+    {
+        "id": "clip_03",
+        "source": "/trailers/clips/clip_03.mp4",
+        "tags": [
+            "unknown"
+        ],
+        "duration": 15.14,
+        "frame": "/trailers/frames/clip_03.jpg"
+    },
+    {
+        "id": "clip_04",
+        "source": "/trailers/clips/clip_04.mp4",
+        "tags": [
+            "unknown"
+        ],
+        "duration": 20.6,
+        "frame": "/trailers/frames/clip_04.jpg"
+    },
+    {
+        "id": "clip_05",
+        "source": "/trailers/clips/clip_05.mp4",
+        "tags": [
+            "unknown"
+        ],
+        "duration": 6.51,
+        "frame": "/trailers/frames/clip_05.jpg"
+    },
+    {
+        "id": "clip_06",
+        "source": "/trailers/clips/clip_06.mp4",
+        "tags": [
+            "unknown"
+        ],
+        "duration": 12.5,
+        "frame": "/trailers/frames/clip_06.jpg"
+    },
+    {
+        "id": "clip_07",
+        "source": "/trailers/clips/clip_07.mp4",
+        "tags": [
+            "unknown"
+        ],
+        "duration": 11.01,
+        "frame": "/trailers/frames/clip_07.jpg"
+    },
+    {
+        "id": "clip_08",
+        "source": "/trailers/clips/clip_08.mp4",
+        "tags": [
+            "unknown"
+        ],
+        "duration": 26.11,
+        "frame": "/trailers/frames/clip_08.jpg"
+    },
+    {
+        "id": "clip_09",
+        "source": "/trailers/clips/clip_09.mp4",
+        "tags": [
+            "unknown"
+        ],
+        "duration": 20.15,
+        "frame": "/trailers/frames/clip_09.jpg"
+    },
+    {
+        "id": "clip_10",
+        "source": "/trailers/clips/clip_10.mp4",
+        "tags": [
+            "water",
+            "nature"
+        ],
+        "duration": 12,
+        "frame": "/trailers/frames/clip_10.jpg"
+    },
+    {
+        "id": "clip_11",
+        "source": "/trailers/clips/clip_11.mp4",
+        "tags": [
+            "sky",
+            "calm"
+        ],
+        "duration": 10,
+        "frame": "/trailers/frames/clip_11.jpg"
+    },
+    {
+        "id": "clip_12",
+        "source": "/trailers/clips/clip_12.mp4",
+        "tags": [
+            "sky",
+            "water"
+        ],
+        "duration": 8,
+        "frame": "/trailers/frames/clip_12.jpg"
+    },
+    {
+        "id": "clip_13",
+        "source": "/trailers/clips/clip_13.mp4",
+        "tags": [
+            "water",
+            "nature",
+            "calm"
+        ],
+        "duration": 15,
+        "frame": "/trailers/frames/clip_13.jpg"
+    },
+    {
+        "id": "clip_14",
+        "source": "/trailers/clips/clip_14.mp4",
+        "tags": [
+            "nature",
+            "calm"
+        ],
+        "duration": 12,
+        "frame": "/trailers/frames/clip_14.jpg"
+    },
+    {
+        "id": "clip_15",
+        "source": "/trailers/clips/clip_15.mp4",
+        "tags": [
+            "nature",
+            "fast"
+        ],
+        "duration": 20,
+        "frame": "/trailers/frames/clip_15.jpg"
+    },
+    {
+        "id": "clip_16",
+        "source": "/trailers/clips/clip_16.mp4",
+        "tags": [
+            "water",
+            "nature"
+        ],
+        "duration": 10,
+        "frame": "/trailers/frames/clip_16.jpg"
+    },
+    {
+        "id": "clip_17",
+        "source": "/trailers/clips/clip_17.mp4",
+        "tags": [
+            "water",
+            "nature",
+            "calm"
+        ],
+        "duration": 12,
+        "frame": "/trailers/frames/clip_17.jpg"
+    },
+    {
+        "id": "clip_18",
+        "source": "/trailers/clips/clip_18.mp4",
+        "tags": [
+            "abstract",
+            "industrial"
+        ],
+        "duration": 8,
+        "frame": "/trailers/frames/clip_18.jpg"
+    },
+    {
+        "id": "clip_19",
+        "source": "/trailers/clips/clip_19.mp4",
+        "tags": [
+            "urban",
+            "crowd",
+            "night"
+        ],
+        "duration": 10,
+        "frame": "/trailers/frames/clip_19.jpg"
+    },
+    {
+        "id": "clip_20",
+        "source": "/trailers/clips/clip_20.mp4",
+        "tags": [
+            "water",
+            "sky"
+        ],
+        "duration": 8,
+        "frame": "/trailers/frames/clip_20.jpg"
+    },
+    {
+        "id": "clip_21",
+        "source": "/trailers/clips/clip_21.mp4",
+        "tags": [
+            "water",
+            "sky",
+            "urban"
+        ],
+        "duration": 10,
+        "frame": "/trailers/frames/clip_21.jpg"
+    },
+    {
+        "id": "clip_22",
+        "source": "/trailers/clips/clip_22.mp4",
+        "tags": [
+            "nature",
+            "calm"
+        ],
+        "duration": 12,
+        "frame": "/trailers/frames/clip_22.jpg"
+    },
+    {
+        "id": "clip_23",
+        "source": "/trailers/clips/clip_23.mp4",
+        "tags": [
+            "urban",
+            "industrial",
+            "fast"
+        ],
+        "duration": 6,
+        "frame": "/trailers/frames/clip_23.jpg"
+    },
+    {
+        "id": "clip_24",
+        "source": "/trailers/clips/clip_24.mp4",
+        "tags": [
+            "nature",
+            "calm"
+        ],
+        "duration": 8,
+        "frame": "/trailers/frames/clip_24.jpg"
+    },
+    {
+        "id": "clip_25",
+        "source": "/trailers/clips/clip_25.mp4",
+        "tags": [
+            "water",
+            "nature"
+        ],
+        "duration": 10,
+        "frame": "/trailers/frames/clip_25.jpg"
+    },
+    {
+        "id": "clip_26",
+        "source": "/trailers/clips/clip_26.mp4",
+        "tags": [
+            "water",
+            "calm"
+        ],
+        "duration": 8,
+        "frame": "/trailers/frames/clip_26.jpg"
+    },
+    {
+        "id": "clip_27",
+        "source": "/trailers/clips/clip_27.mp4",
+        "tags": [
+            "water",
+            "calm"
+        ],
+        "duration": 10,
+        "frame": "/trailers/frames/clip_27.jpg"
+    },
+    {
+        "id": "clip_28",
+        "source": "/trailers/clips/clip_28.mp4",
+        "tags": [
+            "abstract"
+        ],
+        "duration": 8,
+        "frame": "/trailers/frames/clip_28.jpg"
+    }
 ]

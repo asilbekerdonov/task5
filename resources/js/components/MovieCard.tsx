@@ -15,11 +15,18 @@ export default function MovieCard({ movie }: MovieCardProps) {
             className="border border-black/10 rounded-lg p-4 cursor-pointer hover:shadow-lg transition-shadow"
         >
             {/* Freeze frame placeholder */}
-            <div className="w-full aspect-video bg-gray-300 flex items-center justify-center rounded-lg mb-3">
-                <span className="text-white text-lg font-bold text-center px-4">
-                    {movie.title}
-                </span>
-            </div>
+                <div className="w-full aspect-video rounded-lg overflow-hidden relative bg-gray-300 mb-3">
+                    <img
+                        src={movie.trailer.freezeFrame.frame}
+                        alt={movie.title}
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 flex items-end justify-center pb-3 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                        <span className="text-white text-lg font-bold text-center px-4">
+                            {movie.title}
+                        </span>
+                    </div>
+                </div>
 
             {/* Title */}
             <h3 className="font-bold text-sm mb-1">{movie.title}</h3>

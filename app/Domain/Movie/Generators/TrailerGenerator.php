@@ -24,7 +24,7 @@ final class TrailerGenerator
      *   taglineAnimation: array{text: string, type: string}|null,
      *   clips: array<array{clipId: string, source: string, zoom: float, speed: float, colorFilter: string}>,
      *   transitions: string[],
-     *   freezeFrame: array{clipId: string, source: string}
+     *   freezeFrame: array{clipId: string, source: string, frame: string}
      * }
      */
     public function generate(int $pageSeed, int $movieIndex): array
@@ -70,7 +70,8 @@ final class TrailerGenerator
             ];
         }
 
-        $freezeFrameSource = $rng->pick($clips);
+        // Freeze frame — первый выбранный клип (детерминировано, без доп. RNG-вызова)
+        $freezeFrameSource = $selectedClips[0];
 
         $duration = round(
             $rng->nextFloat() * (self::TARGET_DURATION_MAX - self::TARGET_DURATION_MIN) + self::TARGET_DURATION_MIN,
@@ -84,8 +85,9 @@ final class TrailerGenerator
             'clips' => $clips,
             'transitions' => $transitions,
             'freezeFrame' => [
-                'clipId' => $freezeFrameSource['clipId'],
+                'clipId' => $freezeFrameSource['id'],
                 'source' => $freezeFrameSource['source'],
+                'frame' => $freezeFrameSource['frame'] ?? '',
             ],
         ];
     }

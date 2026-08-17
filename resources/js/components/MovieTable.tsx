@@ -93,11 +93,18 @@ export default function MovieTable() {
                                         <td colSpan={5} className="px-6 py-5">
                                             <div className="flex gap-6">
                                                 {/* Freeze frame placeholder */}
-                                                <div className="w-64 aspect-video bg-gray-300 flex items-center justify-center rounded-lg">
-                                                    <span className="text-white text-lg font-bold text-center px-4">
-                                                        {movie.title}
-                                                    </span>
-                                                </div>
+                                                    <div className="w-64 aspect-video rounded-lg overflow-hidden relative bg-gray-300">
+                                                        <img
+                                                            src={movie.trailer.freezeFrame.frame}
+                                                            alt={movie.title}
+                                                            className="w-full h-full object-cover"
+                                                        />
+                                                        <div className="absolute inset-0 flex items-end justify-center pb-3 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                                                            <span className="text-white text-lg font-bold text-center px-4">
+                                                                {movie.title}
+                                                            </span>
+                                                        </div>
+                                                    </div>
                                                 
                                                 <div className="flex-1">
                                                     <button

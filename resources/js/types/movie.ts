@@ -17,7 +17,7 @@ export interface Trailer {
     taglineAnimation: { text: string; type: string } | null;
     clips: TrailerClip[];
     transitions: string[];
-    freezeFrame: { clipId: string; source: string };
+    freezeFrame: { clipId: string; source: string , frame: string;  };
 }
 
 export interface Movie {
