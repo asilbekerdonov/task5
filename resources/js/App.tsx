@@ -2,6 +2,7 @@ import React from 'react';
 import { GenerationParamsProvider, useGenerationParams } from './context/GenerationParamsContext';
 import Toolbar from './components/Toolbar';
 import MovieTable from './components/MovieTable';
+import GalleryView from './components/GalleryView';
 
 function AppContent() {
     const { params } = useGenerationParams();
@@ -13,11 +14,7 @@ function AppContent() {
             </header>
             <Toolbar />
             <main className="px-8 py-6">
-                {params.view === 'table' ? (
-                    <MovieTable />
-                ) : (
-                    <p>Gallery view coming next.</p>
-                )}
+                {params.view === 'table' ? <MovieTable /> : <GalleryView />}
             </main>
         </div>
     );
