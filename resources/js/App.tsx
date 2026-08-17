@@ -1,8 +1,10 @@
 import React from 'react';
 import { GenerationParamsProvider, useGenerationParams } from './context/GenerationParamsContext';
+import { TrailerProvider } from './context/TrailerContext';
 import Toolbar from './components/Toolbar';
 import MovieTable from './components/MovieTable';
 import GalleryView from './components/GalleryView';
+import TrailerPlayer from './components/TrailerPlayer';
 
 function AppContent() {
     const { params } = useGenerationParams();
@@ -16,6 +18,7 @@ function AppContent() {
             <main className="px-8 py-6">
                 {params.view === 'table' ? <MovieTable /> : <GalleryView />}
             </main>
+            <TrailerPlayer />
         </div>
     );
 }
@@ -23,7 +26,9 @@ function AppContent() {
 export default function App() {
     return (
         <GenerationParamsProvider>
-            <AppContent />
+            <TrailerProvider>
+                <AppContent />
+            </TrailerProvider>
         </GenerationParamsProvider>
     );
 }

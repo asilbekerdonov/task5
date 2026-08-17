@@ -3,6 +3,7 @@ import { useGenerationParams } from '../context/GenerationParamsContext';
 import { fetchMovies } from '../api/movies';
 import { Movie } from '../types/movie';
 import Pagination from './Pagination';
+import { useTrailer } from '../context/TrailerContext';
 
 export default function MovieTable() {
     const { params, setPage } = useGenerationParams();
@@ -42,6 +43,8 @@ export default function MovieTable() {
     const toggleExpand = (index: number) => {
         setExpandedIndex(expandedIndex === index ? null : index);
     };
+
+    const { playTrailer } = useTrailer();
 
     return (
         <div className="relative mt-6">
@@ -98,7 +101,7 @@ export default function MovieTable() {
                                                 
                                                 <div className="flex-1">
                                                     <button
-                                                        onClick={() => console.log('play trailer', movie.trailer)}
+                                                        onClick={() => playTrailer(movie)}
                                                         className="mb-4 rounded-full px-6 py-2 bg-black text-white text-sm hover:bg-black/80 transition-colors"
                                                     >
                                                         ▶ Play

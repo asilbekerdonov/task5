@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Movie } from '../types/movie';
+import { useTrailer } from '../context/TrailerContext';
 
 interface MovieCardProps {
     movie: Movie;
@@ -7,7 +8,7 @@ interface MovieCardProps {
 
 export default function MovieCard({ movie }: MovieCardProps) {
     const [expanded, setExpanded] = useState(false);
-
+    const { playTrailer } = useTrailer();
     return (
         <div
             onClick={() => setExpanded(!expanded)}
@@ -35,7 +36,7 @@ export default function MovieCard({ movie }: MovieCardProps) {
             {expanded && (
                 <div onClick={(e) => e.stopPropagation()}>
                     <button
-                        onClick={() => console.log('play trailer', movie.trailer)}
+                        onClick={() => playTrailer(movie)}
                         className="mb-3 rounded-full px-4 py-1.5 bg-black text-white text-xs hover:bg-black/80 transition-colors"
                     >
                         ▶ Play
